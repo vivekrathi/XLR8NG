@@ -1,0 +1,51 @@
+{
+  "name": "xlr8ng-deals-app",
+  "version": "1.0.0",
+  "description": "A complete clone of thedealapp.in using React Native and React JS",
+  "main": "index.js",
+  "private": true,
+  "workspaces": [
+    "web",
+    "mobile",
+    "shared"
+  ],
+  "scripts": {
+    "install:all": "npm install && npm run install:web && npm run install:mobile && npm run install:shared",
+    "install:web": "cd web && npm install",
+    "install:mobile": "cd mobile && npm install",
+    "install:shared": "cd shared && npm install",
+    "dev": "concurrently \"npm run dev:web\" \"npm run dev:mobile:metro\"",
+    "dev:web": "cd web && npm start",
+    "dev:mobile": "cd mobile && npm run android",
+    "dev:mobile:metro": "cd mobile && npm start",
+    "dev:mobile:ios": "cd mobile && npm run ios",
+    "build": "npm run build:shared && npm run build:web",
+    "build:web": "cd web && npm run build",
+    "build:shared": "cd shared && npm run build",
+    "test": "npm run test:shared && npm run test:web",
+    "test:web": "cd web && npm test",
+    "test:shared": "cd shared && npm test",
+    "lint": "npm run lint:web && npm run lint:mobile && npm run lint:shared",
+    "lint:web": "cd web && npm run lint",
+    "lint:mobile": "cd mobile && npm run lint",
+    "lint:shared": "cd shared && npm run lint",
+    "start:web": "cd web && npm start",
+    "start:mobile": "cd mobile && npm start"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "keywords": [
+    "react",
+    "react-native",
+    "deals",
+    "ecommerce",
+    "discount",
+    "shopping",
+    "mobile",
+    "web",
+    "typescript"
+  ],
+  "author": "XLR8NG Team",
+  "license": "MIT"
+}
